@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StatisticsSceneController">
+   <children>
+      <Label fx:id="statistics" layoutX="50.0" layoutY="54.0" prefHeight="25.0" prefWidth="336.0" text="Statistics">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="title" layoutX="201.0" layoutY="14.0" prefWidth="205.0" text="Congratulations!">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="94.0" layoutY="153.0" text="Played" />
+      <Label layoutX="213.0" layoutY="153.0" text="Win %" />
+      <Label layoutX="328.0" layoutY="153.0" text="Current Streak" />
+      <Label layoutX="471.0" layoutY="153.0" prefHeight="17.0" prefWidth="62.0" text="Max Streak" />
+      <TextField fx:id="txtPlayed" alignment="CENTER" editable="false" layoutX="84.0" layoutY="89.0" prefHeight="53.0" prefWidth="56.0" style="-fx-background-color: none;" text="100">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtWinPercentage" alignment="CENTER" editable="false" layoutX="202.0" layoutY="89.0" prefHeight="53.0" prefWidth="56.0" style="-fx-background-color: none;" text="100">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtCurrentStreak" alignment="CENTER" editable="false" layoutX="338.0" layoutY="89.0" prefHeight="53.0" prefWidth="56.0" style="-fx-background-color: none;" text="100">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtMaxStreak" alignment="CENTER" editable="false" layoutX="474.0" layoutY="89.0" prefHeight="53.0" prefWidth="56.0" style="-fx-background-color: none;" text="100">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="fileName" layoutX="413.0" layoutY="21.0" promptText="stats.txt" />
+      <Button fx:id="saveButton" layoutX="562.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#saveGame" prefHeight="25.0" prefWidth="25.0" />
+      <Button fx:id="resetButton" layoutX="14.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#resetGame" prefHeight="25.0" prefWidth="25.0" />
+      <Label layoutX="50.0" layoutY="192.0" text="Guess Distribution">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <VBox layoutX="52.0" layoutY="217.0" prefHeight="118.0" prefWidth="13.0">
+         <children>
+            <Label text="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="5">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="6">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="65.0" layoutY="217.0" prefHeight="118.0" prefWidth="205.0">
+         <children>
+            <Label fx:id="label1" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="221.0" style="-fx-background-color: gray;" text="1" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets right="4.0" />
+               </padding>
+            </Label>
+            <Label fx:id="label2" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="250.0" style="-fx-background-color: gray;" text="2" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets right="4.0" />
+               </padding>
+            </Label>
+            <Label fx:id="label3" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="240.0" style="-fx-background-color: gray;" text="3" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets right="4.0" />
+               </padding>
+            </Label>
+            <Label fx:id="label4" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="208.0" style="-fx-background-color: gray;" text="4" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets right="4.0" />
+               </padding>
+            </Label>
+            <Label fx:id="label5" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="237.0" style="-fx-background-color: gray;" text="5" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets right="4.0" />
+               </padding>
+            </Label>
+            <Label fx:id="label6" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="223.0" style="-fx-background-color: gray;" text="6" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets right="4.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
